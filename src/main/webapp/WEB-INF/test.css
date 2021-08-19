@@ -1,0 +1,1048 @@
+@charset "ISO-8859-1";
+@import url('https://fonts.googleapis.com/css2?family=Megrim&family=Quicksand:wght@300&family=Rouge+Script&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: none;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 0.2fr 2fr 2fr 2fr;
+    grid-template-areas: 
+                "main   header"
+                "main   banking"
+                "main   contact"
+                "main   features" 
+                "blankspace1  blankspace1"
+                "pic    about"
+                "blankspace2    blankspace2"
+                "transfer   transfer"
+                "blankspace3    blankspace3"
+                "services   services";
+}
+
+main{
+    grid-area: main;
+    background: #EAEAEA;
+}
+
+.header, .banking, .contact, .features{
+    background: #f6f5f5;
+}
+
+.header{
+    grid-area: header;
+}
+
+.banking{
+    grid-area: banking;
+}
+
+.contact{
+    grid-area: contact;
+}
+
+.features{
+    grid-area: features;
+}
+
+
+.grid-container { 
+    box-sizing: border-box; 
+} 
+
+main h4{        /*Introducing*/
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-family: Calibri;
+    font-size: 157px;
+    font-weight: 100;
+    color: #9A9A9A;
+    opacity: 0.15;
+    float: left;
+    margin-left: 100px;
+}
+
+main h2{        /*Matrix*/
+    font-size: 10em;
+    font-family: 'Megrim', cursive;
+    font-weight: 500;
+    margin-top: 280px;
+    color: #676767;
+}
+
+main h3{        /*slogan*/
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: 'Rouge Script', cursive;
+    color: #B6B6B6;
+    letter-spacing: 3px;
+    opacity: 0.6;
+}
+
+.header h2 span{        /*M*/
+    background-color: #EBEBEB;
+    padding: 15px;
+}
+
+.header h2{
+    text-align: right;
+    font-weight: 300;
+    font-size: 80px;
+    font-family: 'Megrim', cursive;
+    opacity: 0.7;
+}
+
+.banking, .contact, .features h4{
+    text-align: center;
+    padding: 30px 0 0 0;
+}
+
+.grid-btn{
+    border: 0px;
+    background: #f6f5f5;
+    color: #6b705c;
+    padding: 7px 30px 7px 30px;
+    font-size: 2.2em;
+    font-family: Quicksand;
+    font-weight: 500;
+    transition: 200ms;
+    text-transform: uppercase;
+}
+
+.grid-btn:hover{
+    font-size: 2.5em;
+    font-weight: bold;
+    background-color: #f6f5f5;
+    color: #676767;
+    cursor: pointer;
+    outline: none;
+}
+
+/*.contact .grid-btn:hover{
+    border-radius: 40px;
+}
+
+.features .grid-btn:hover{
+    border-radius: 0 0 40px 40px;
+}*/
+
+.blankspace1{
+    grid-area: blankspace1;
+    background: #f6f5f5;
+    opacity: 0.4;
+    height: 6em;
+}
+
+.pic{
+    grid-area: pic;
+    background-color: white;
+    height: 40em;
+    position: relative;
+}
+
+.pic img{
+    float: right;
+    position: relative;
+    top: 86px;
+    left: 64px;
+    height: 75%;
+    width: 80%;
+    border-radius: 0 80px 0 80px;
+    padding: 10px;
+    border: 2px solid whitesmoke;
+}
+
+.pic h3{
+    font-size: 2.2em;
+    position: absolute;
+    left: 0;
+    color: white;
+    font-family: Quicksand;
+    font-weight: 300;
+}
+
+.pic h3 #pic-strat{
+    float: left;
+    padding: 22px 60px 22px 51px;
+    background: #729A9A;
+}
+
+.about{
+    grid-area: about;
+    background-color: #729A9A;
+}
+
+.about h2{
+    padding: 5.6em 1em 0.5em 2em;
+    text-align: center;
+    font-family: Quicksand;
+    font-weight: 400;
+    color: white;
+    opacity: 0.6;
+    font-size: 3em;
+}
+
+.blankspace2{
+    grid-area: blankspace2;
+    background: white;
+    height: 4em;
+}
+
+.transfer{
+    grid-area: transfer;
+    background: whitesmoke;
+    height: 40em;
+}
+
+.transfer section{    
+    margin: auto;
+    margin-top: 2em;
+    background-color: white;
+    position: relative;
+    width: 95%;
+    height: 90%;
+}
+
+.transfer section h3{
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    float: left;
+    padding: 22px;
+    font-family: Quicksand;
+    font-weight: 300;
+    font-size: 2em;
+    color: white;
+    background: #729A9A;
+}
+
+.transfer section h1{
+    float: left;
+    font-family: Quicksand;
+    font-size: 55px;
+    font-weight: 400;
+    padding: 4em 0 0 1em;
+    opacity: 0.6;
+}
+
+.transfer section img{
+    float: right;
+    padding: 1em;
+    width: 50%;
+    height: 100%;
+}
+
+.blankspace3{
+    grid-area: blankspace3;
+    background: white;
+    height: 4em;
+}
+
+.services{
+    grid-area: services;
+    background: #ded7b1;
+    height: 140em;
+}
+
+.services h2{       /*service*/
+    float: right;
+    padding: 22px;
+    font-family: Quicksand;
+    font-weight: 300;
+    font-size: 2em;
+    color: white;
+    background: #729A9A;
+}
+
+.services p1{
+    text-align: right   ;
+    color: beige;
+    font-family: Quicksand;
+    font-weight: bold;
+    font-size: 5.8em;
+    position: relative;
+    top: 2.5em;
+    opacity: 0.6;
+}
+
+.services p2{
+    text-align: left;
+    color: beige;
+    font-family: Quicksand;
+    font-weight: bold;
+    font-size: 5.8em;
+    position: relative;
+    right: 6em;
+    top: 7em;
+    opacity: 0.6;
+}
+
+.services p3{
+    text-align: right;
+    color: beige;
+    font-family: Quicksand;
+    font-weight: bold;
+    font-size: 5.8em;
+    position: relative;
+    right: 1.5em;
+    top: 12.7em;
+    opacity: 0.6;
+}
+
+.services p4{
+    color: beige;
+    font-family: Quicksand;
+    font-weight: bold;
+    font-size: 5.8em;
+    position: relative;
+    right: 7em;
+    top: 17.7em;
+    opacity: 0.6;
+}
+
+                /*all sections color*/
+.services .first,.services .second,.services .third,.services .fourth{
+    background: #9dab86;
+}
+
+.services .second{  
+    float: right;
+}
+
+.services .fourth{
+    float: right;
+}
+
+.services .first, .second, .third ,.fourth{      /*4 sections*/
+    float: left;
+    margin: 1.5em 9em 0 9em;
+    position: relative;
+    width: 33%;
+    height: 23.5%;
+}
+
+.services .first img, .second img, .third img, .fourth img{    /*section images*/
+    padding: 1em;   
+    background-size: cover;
+    width: 100%;
+    height: 75%;
+}
+
+.services .first h3, .second h3, .third h3, .fourth h3{     /*section description*/
+    text-align: center;
+    font-family: Quicksand;
+    color: white;
+    font-size: 2.2em;
+    font-weight: 400;
+}
+
+.first:hover, .second:hover, .fourth:hover, .third:hover{      /*4 sections hover effect*/
+    opacity: 0.9;
+}
+
+
+/*------------------FOOTER--------------------*/
+
+.site-footer
+{
+  background-color: whitesmoke;
+  padding:45px 0 20px;
+  line-height:7em;
+  color:#737373;
+}
+
+.site-footer h5         /*logo (M)*/
+{
+  color:#474747;
+  font-size: 8em;
+  font-weight: 400;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  text-align: center;
+  font-family: 'Megrim', cursive;
+  opacity: 0.5;
+}
+
+.footer-links
+{
+  list-style:none;
+  text-align: center;
+}
+
+.footer-links .btn-btn{     /*link buttons*/
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background: whitesmoke;
+    border: 2px solid #676767;
+    padding: 10px 15px 10px 15px;
+    font-family: 'Quicksand', sans-serif;
+    transition: 200ms;
+}
+
+.footer-links li 
+{
+  display:inline;
+  padding: 15px;
+}
+
+.footer-links a
+{
+  color: #474747;
+  text-decoration: none;
+}
+
+.footer-links a:active,.footer-links a:focus,.btn-btn:hover
+{
+    font-size: 23px;
+    background-color: #9A9A9A;
+    border-color: #9A9A9A;
+    color:white;
+    border-radius: 40px;
+    font-weight: 600;
+    text-decoration:none;
+    outline: none;
+    cursor: pointer;
+}
+
+.footer-links.inline li
+{
+  display:inline-block
+}
+
+.site-footer hr
+{
+    margin: auto;
+    height: 0px;
+    width: 40%;
+    border-radius: 4px;
+    border-color: #535353;
+    background-color: #535353;
+}
+
+.site-footer .social-icons
+{
+  text-align:center;
+}
+
+.site-footer .social-icons a
+{
+  width:50px;
+  height:50px;
+  line-height:47px;
+  margin-right:0;
+  border-radius:100%;
+  border: 1.6px solid #474747;
+  transition: all 200ms;
+}
+
+.social-icons
+{
+  padding-right:20px;
+  margin-bottom:0;
+  list-style:none;
+}
+
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:6px;
+  margin: 5px;
+  margin-top: 15px;
+}
+
+.social-icons a{
+  color: #535353;;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:10px;
+  border-radius:100%;
+}
+
+.social-icons a.facebook:hover{
+    background-color: #3b5998;
+    color: white;
+    border-color: #3b5998;
+    transition: all 200ms;
+  }
+
+ .social-icons a.twitter:hover{
+    background-color: #55acee;
+    color: white;
+    border-color: #55acee;
+    transition: all 200ms;
+}
+
+.social-icons a.instagram:hover
+{
+    background: #F56040;
+    color: white;
+    border-color: #F56040;
+    transition: all 200ms;
+}
+
+.copyright-text
+{
+  margin-left: 25px;
+  margin-bottom: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/*------------------about,contact-----------------*/
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#about-bg{
+    background: #A1C2BC;
+}
+
+.grid-about{
+    display: grid;
+    grid-template-columns:0.5fr 2.5fr 1.4fr;
+    grid-template-rows: 1fr 2fr 2fr;
+    height: 45em;
+    grid-template-areas: 
+                "logo  header  back"
+                "whitespace1    main    about-pic"
+                "whitespace2    para    about-pic";
+}
+
+.logo{
+    grid-area: logo;
+}
+
+header{
+    grid-area: header;
+}
+
+.back{
+    grid-area: back;
+}
+
+.whitespace1{
+    grid-area: whitespace1;
+}
+
+.main{
+    grid-area: main;
+}
+
+.about-pic{
+    grid-area: about-pic;
+}
+
+.whitespace2{
+    grid-area: whitespace2;
+}
+
+.para{
+    grid-area: para;
+}
+
+.grid-about .logo h2{
+    text-align: right;
+    padding: 30px 10px 0 0;
+    font-size: 5em;
+    font-family: 'Megrim', cursive;
+    font-weight: 400;
+}
+
+.main h1{
+    font-family: Quicksand;
+    position: relative;
+    top: 120px;
+    font-size: 7em;
+}
+
+.para p{        /*about*/
+    font-family: Quicksand;
+    padding: 0 60px 0 0px;
+    font-size: 2em;
+}
+
+.para h5{       /*contact*/
+    font-family: Quicksand;
+    font-size: 2em;
+}
+
+#address{       /*contact*/
+    text-align: center;
+    margin-top: -80px;
+}
+
+.back h4{
+    text-align: center;
+    padding: 50px 0 0 0;
+}
+
+.back-btn{    
+    border: 0 solid #A1C2BC;
+    background: #A1C2BC;
+    padding: 7px 30px 7px 30px;
+    font-size: 2em;
+    font-family: Quicksand;
+    font-weight: 500;
+    transition: all 250ms;
+}
+
+.back-btn:hover{
+    border-radius: 40px;
+    font-size: 1.7em;
+    background-color: #A5CEC7;
+    border-color: #A5CEC7;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.about-pic img{
+    border: 2px solid white;
+    background-size: cover;
+    margin: 55px 0 0 16px;
+    padding: 10px;
+    width: 95%;
+    height: 80%;
+}
+
+.grid-about .logo h2, .back-btn, .main h1, .para p, .para h5{   /*contact --> para h5*/
+    color: white;
+    opacity: 0.6;
+}
+
+/*----------------BANKING-------------*/
+.grid-bankingpg{
+    display: grid;
+    grid-template-columns:0.6fr 2fr 2fr 1.4fr;
+    grid-template-rows: 1fr 1.4fr 2.5fr 2fr;
+    height: 45em;
+    grid-template-areas: 
+                "logo   header  header  back"
+                "e1   whitespace3    whitespace3    whitespace3"
+                "e2     p-acc      b-acc    b-acc"
+                "e3     p-links    b-links  b-links";
+}
+
+.grid-bankingpg .logo{
+    grid-area: logo;
+}
+
+header{
+    grid-area: header;
+}
+
+.back{
+    grid-area: back;
+}
+
+.e1{
+    grid-area: e1;
+}
+
+.e2{
+    grid-area: e2;
+}
+
+.e3{
+    grid-area: e3;
+}
+
+.whitespace3{
+    grid-area: whitespace3;
+}
+
+.p-acc{
+    grid-area: p-acc;
+}
+
+.b-acc{
+    grid-area: b-acc;
+}
+
+.p-links{
+    grid-area: p-links;
+}
+
+.b-links{
+    grid-area: b-links;
+}
+
+.e1,.e2,.e3,.whitespace3,.p-acc,.b-acc,.p-links,.b-links{
+    background: #f6f5f5;
+}
+
+.logo h2{
+    text-align: right;
+    padding: 30px 10px 0 0;
+    font-size: 5em;
+    font-family: 'Megrim', cursive;
+    font-weight: 400;
+}
+
+.cnt-btn{   
+    float: right; 
+    border: 0;
+    background: whitesmoke;
+    margin-right: 30px;
+    padding: 7px 30px 7px 30px;
+    font-size: 2em;
+    font-family: Quicksand;
+    font-weight: 500;
+    transition: all 250ms;
+}
+
+.cnt-btn:hover{
+    border-radius: 40px;
+    font-size: 1.7em;
+    background-color: #B6B6B6;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.p-acc h2, .b-acc h2{
+    text-align: center;
+    padding-top: 45px;
+    font-family: Quicksand;
+    font-size: 4em;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.link-btns{
+    list-style:none;
+    text-align: center;
+}
+
+.link-btns li{
+    display:inline;
+    padding: 25px;
+}
+
+.login-btn{
+    border: 2px solid #737373;
+    background: #f6f5f5 ;
+    text-transform: uppercase;
+    font-family: Quicksand;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    transition: 200ms;
+}
+
+.p-links a:focus,.b-links a:focus,.login-btn:hover{
+    background: #676767;
+    border-radius: 45px;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 500;
+    outline: none;
+    cursor: pointer;
+}
+
+/*-------------PERSONAL LOGIN---------------*/
+.grid-login{
+    display: grid;
+    grid-template-columns: 2fr 2fr 0.5fr;
+    grid-template-rows: 1fr 1.4fr 2fr 2fr;
+    /*grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    background-color: aquamarine;*/
+    height: 45em;
+    grid-template-areas: 
+                    "top     top  bnk"
+                    "cover-pic  login   login"
+                    "cover-pic  login   login"
+                    "cover-pic  login   login";
+}
+
+.top{
+    grid-area: top;
+}
+
+.bnk{
+    grid-area: bnk;
+}
+
+.cover-pic{
+    grid-area: cover-pic;
+    background: #FDFDFD;
+}
+
+.login{
+    grid-area: login;
+    background-color: #FDFDFD;
+}
+
+.top h2{
+    padding: 15px 0 0 100px;
+    font-size: 5em;
+    font-family: 'Megrim', cursive;
+    font-weight: 400;
+}
+
+.banking-btn{   
+    float: right; 
+    border: 0;
+    background: whitesmoke;
+    margin-top: 40px;
+    margin-right: 35px;
+    padding: 7px 30px 7px 30px;
+    font-size: 2em;
+    font-family: Quicksand;
+    font-weight: 500;
+    transition: all 250ms;
+    display: block;
+}
+
+.banking-btn:hover{
+    border-radius: 40px;
+    font-size: 1.7em;
+    background-color: #B6B6B6;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.cover-pic img{
+    background-size: cover;
+    padding: 55px;
+    height: 100%;
+    width: 100%;
+    border-radius: 85px;
+}
+
+.login h3{
+    font-family: Quicksand;
+    color: #676767;
+    font-size: 3em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#plogin{
+    text-align: center;
+    padding-top: 140px;
+}
+
+.fnm,.pswd     /*textbox style*/
+ {
+   border-radius: 50px;
+   padding: 15px;
+   width: 300px;
+   height: 45px;
+   border: 0px;
+   background: whitesmoke;
+   font-family: Quicksand;
+   font-size: 14px;
+   outline: none;
+}
+
+.bt{              /*login button*/
+    background-color: gray;
+    color: white;
+    font-size: 15px;
+    font-family: Quicksand;
+    font-weight: 600;
+    border-radius: 30px;
+    padding: 5px 10px 5px 10px;
+    letter-spacing: 1px;
+    outline: none;
+}
+
+.btns li{
+    display:inline-block;
+    padding: 0 45px 0 45px;
+    list-style: none;
+}
+
+.btns li .fp{
+    font-size: 1em;
+    font-family: Quicksand;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    transition: 150ms;
+}
+
+.btns li .fp:hover{
+    color: #737373;
+}
+
+.details p5 {
+    font-size: 1.2em;
+    font-family: Quicksand;
+}
+
+.new-acc{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 200ms;
+}
+
+.new-acc:hover{
+    color: #737373;
+}
+
+/*-------------PERSONAL REGISTRATION-----------------*/
+.grid-login{
+    display: grid;
+    grid-template-columns: 2fr 2fr 0.5fr;
+    grid-template-rows: 1fr 1.4fr 2fr 2fr;
+    /*grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    background-color: aquamarine;*/
+    height: 45em;
+    grid-template-areas: 
+                    "top     top  bnk"
+                    "cover-pic  login   login"
+                    "cover-pic  login   login"
+                    "cover-pic  login   login";
+}
+
+.top{
+    grid-area: top;
+}
+
+.bnk{
+    grid-area: bnk;
+}
+
+.cover-pic{
+    grid-area: cover-pic;
+    background: #FDFDFD;
+}
+
+.login{
+    grid-area: login;
+    background-color: #FDFDFD;
+}
+
+.top h2{
+    padding: 15px 0 0 100px;
+    font-size: 5em;
+    font-family: 'Megrim', cursive;
+    font-weight: 400;
+}
+
+.banking-btn{   
+    float: right; 
+    border: 0;
+    background: whitesmoke;
+    margin-top: 40px;
+    margin-right: 35px;
+    padding: 7px 30px 7px 30px;
+    font-size: 2em;
+    font-family: Quicksand;
+    font-weight: 500;
+    transition: all 250ms;
+    display: block;
+}
+
+.banking-btn:hover{
+    border-radius: 40px;
+    font-size: 1.7em;
+    background-color: #B6B6B6;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.cover-pic img{
+    background-size: cover;
+    padding: 55px;
+    height: 100%;
+    width: 100%;
+    border-radius: 85px;
+}
+
+.login h3{
+    font-family: Quicksand;
+    color: #676767;
+    font-size: 3em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.login{
+    text-align: center;
+    padding-top: 30px;
+}
+
+.fn,.sn,.gd,.dob     /*textbox style*/
+ {
+   border-radius: 50px;
+   padding: 15px;
+   width: 250px;
+   height: 45px;
+   border: 0px;
+   background: whitesmoke;
+   font-family: Quicksand;
+   font-size: 14px;
+   outline: none;
+}
+
+.em,.mob,.add,.pwd,.cfpwd     /*textbox style*/
+ {
+   border-radius: 50px;
+   padding: 15px;
+   width: 500px;
+   height: 45px;
+   border: 0px;
+   background: whitesmoke;
+   font-family: Quicksand;
+   font-size: 14px;
+   outline: none;
+}
+
+.bt{              /*login button*/
+    background-color: #9A9A9A;
+    color: white;
+    font-size: 15px;
+    font-family: Quicksand;
+    font-weight: 600;
+    border-radius: 30px;
+    padding: 5px 10px 5px 10px;
+    letter-spacing: 1px;
+    outline: none;
+}
+
+.btns li{
+    display:inline-block;
+    padding: 0 45px 0 45px;
+    list-style: none;
+}
+
+/*--------------BUSINESS REGISTRATION--------------*/
+.org,.eml,.phno,.addr,.pwrd,.cfpwrd     /*textbox style*/
+ {
+   border-radius: 50px;
+   padding: 15px;
+   width: 400px;
+   height: 45px;
+   border: 0px;
+   background: whitesmoke;
+   font-family: Quicksand;
+   font-size: 14px;
+   outline: none;
+}

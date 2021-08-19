@@ -1,0 +1,2641 @@
+@import url('https://fonts.googleapis.com/css2?family=Megrim&family=Quicksand:wght@300&family=Rouge+Script&display=swap');
+
+:root {
+    --mainh5-backcolor: beige;
+    --maindark: #292929;
+    --white1: white;
+    --toggle: rgb(95, 83, 60);
+    --diff: rgb(51, 51, 51);
+    --linputcolor: whitesmoke;
+            /*font colors*/
+    --bheading1: #494949;
+    --bheading: rgb(236, 220, 188);
+    --scolor: rgb(170, 151, 112);   /*slogan color*/
+    --maincolors: rgb(116, 99, 65); /*default matrix color on light theme*/
+    --lh3color: rgb(104, 92, 67);
+}
+
+.light-theme {
+    --navbar: var(--mainh5-backcolor);
+    --main-h5: var(--mainh5-bkcolor);
+    --bname: var(--white1);
+    --mainh5: var(--mainh5-backcolor);
+    --toggle-switch: var(--toggle);
+    --lnavcolor: var(--white1);
+    --linputcolor1: var(--linputcolor);
+            /*font colors*/
+    --s1color: var(--scolor);
+    --heading: var(--bheading);
+    --fontcolors: var(--maincolors);
+    --lcreateacc: var(--diff);
+    --lbtnhover1: var(--lbtnhover);
+    --lbbtn: var(--white1);     /*login back icon default color*/
+    --lbbtn1: var(--linputcolor);   /* login back icon hover color*/
+    --lbbtn2: var(--lh3color);     /*login back icon color */
+    --lh3color1: var(--lh3color);
+    --lh3color2: var(--lh3color);
+  }
+  
+  .dark-theme {
+    --navbar: var(--diff);
+    --mainh5: var(--maindark);
+    --bname: var(--maindark);
+    --toggle-switch: var(--maindark);
+    --lnavcolor: var(--diff);
+    --lbgcolor1: var(--maindark);
+    --linputcolor1: var(--diff);
+            /*font colors*/
+    --heading: var(--bheading1);
+    --fontcolors: var(--scolor);
+    --toggle-switch: var(--scolor);
+    --s1color: var(--scolor);
+    --loginheading2: var(--white1);
+    --lcreateacc: var(--white1);
+    --lmainbtn: var(--maindark);
+    --lbtnbordercolor1: var(--scolor);
+    --lbtnhover1: var(--scolor);
+    --lbbtn: var(--diff);   /*login back icon default color*/
+    --lbbtn1: var(--maindark);  /* login back icon hover color*/
+    --lbbtn2: var(--scolor);    /*login back icon color */
+    --lh3color1: var(--scolor);
+    --lh3color2: var(--linputcolor);
+  }
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: var(--bname);
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: background .6s;
+}
+
+.dark-mode{
+    float: right;
+    margin-right: 2em;
+}
+
+.toggle-btn{
+    color: var(--toggle-switch);
+    background: var(--navbar);
+    font-size: 2em;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+.navbtn{
+    margin: 35px 20px 0 0;
+}
+
+.navbtn1{
+    background-color: var(--toggle-switch);
+    color: beige;
+    margin: 28px 20px 0 0;
+    padding: 8px 23px;
+    border: 2px solid var(--toggle-switch);
+    border-radius: 30px;
+    font-size: 1.2em;
+    font-family: Quicksand;
+    font-weight: bold;
+    transition: all 250ms;
+}
+
+.navbtn1:hover{
+    background-color: transparent;
+    color: var(--toggle-switch);
+}
+
+.navbtn {
+    margin: 28px 20px 0 0;
+    padding: 8px 20px;
+    border: 2px solid var(--toggle-switch);
+    border-radius: 30px;
+    font-size: 0.75em;
+    transition: all 250ms;
+}
+
+.navbtn:hover{
+    background-color: var(--toggle-switch);
+    color: beige;
+}
+
+.navbar a {
+    float: right;
+    display: block;
+    color: var(--toggle-switch);
+    text-decoration: none;
+    font-family: Quicksand;
+}
+  
+.dropbtn {
+    background: none;
+    border: none;
+    color: var(--toggle-switch);
+    font-family: Quicksand;
+    margin: 8px 12px 0 0;
+    padding: 8px 20px;
+    border: 2px solid var(--toggle-switch);
+    border-radius: 30px;
+    font-size: 0.8em;
+    transition: all 250ms;
+}
+
+.dropbtn:hover {
+    background-color: var(--toggle-switch);
+    color: beige;
+}
+  
+.dropdown {
+      float: right;
+      margin: 20px 10px 0 0;
+}
+
+.dropdown-content {
+    right: 90px;
+    display: none;
+    position: absolute;
+    font-size: 1.3em;   
+    background-color: var(--navbar);
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);  
+}
+  
+.dropdown-content a {
+    color: var(--toggle-switch);
+    padding: 20px 15px;
+    text-decoration: none;
+    transition: all 250ms;
+  }
+  
+.dropdown-content a:hover {
+    background-color: var(--bname);
+    font-weight: bold;
+    border-radius: 40px;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+    border-radius: 30px;
+}
+  
+.dropdown:hover .dropbtn {
+    font-weight: bold;
+}
+
+.lq{
+    background: cover;
+    width: 95%;
+    height: 90%;
+    padding-top: 100px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 0.4fr 0.5fr 2fr 2fr;
+    grid-template-rows: 0.4fr 2fr 1fr;
+/*  grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    background-color: aquamarine;*/ 
+    height: 45em;
+    grid-template-areas: 
+                "et1    empty   empty   main-links"
+                "main   main    main   header"
+                "main   main    main   header";
+}
+
+main{
+    grid-area: main;
+    background: var(--bname);
+    border-top-right-radius: 12em;
+    border: 2px solid rgb(221, 203, 167);
+    border-bottom-color: var(--bname);
+    border-left-color: var(--bname);
+}
+
+.main-links{
+    grid-area: main-links;
+    background: var(--navbar);
+    border-bottom-left-radius: 12em;
+}
+
+.header{
+    grid-area: header;
+}
+
+.grid-container { 
+    box-sizing: border-box; 
+} 
+
+main h5{        /*Introducing*/
+    font-family: Quicksand;
+    background: var(--navbar);
+    padding-left: 40px;
+    border-top-right-radius: 1.98em;
+    font-size: 6em;
+    padding-top: 120px;
+    font-weight: 200;
+    color: var(--heading);
+}
+
+main h2{        /*Matrix*/
+    font-size: 10em;
+    text-align: center;
+    font-family: 'Megrim', cursive;
+    margin-top: 5px;
+    font-weight: 500;
+    margin-left: 240px;
+    color: var(--fontcolors);
+}
+
+main h3{        /*slogan*/
+    text-align: right;
+    margin-top: -40px;
+    padding-right: 92px;
+    font-size: 35px;
+    font-weight: 600;
+    font-family: 'Rouge Script', cursive;
+    color: var(--s1color);
+    letter-spacing: 3px;
+}
+
+.header h2 span{        /*M*/
+    background-color: #EBEBEB;
+    padding: 15px;
+}
+
+.et1 h2{
+    text-align: center;
+    font-weight: 500;
+    font-size: 5.5em;
+    font-family: 'Megrim', cursive;
+    color: var(--fontcolors);
+    opacity: 0.8;
+    padding-top: 5px;
+}
+
+/*------------------FOOTER--------------------*/
+
+.site-footer
+{
+  background: var(--navbar);
+  padding:35px 0 20px;
+  color:rgb(95, 83, 60);
+}
+
+.footer-links
+{
+  list-style:none;
+}
+
+.footer-links .btn-btn{     /*link buttons*/
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background: transparent;
+    color: var(--toggle-switch);
+    border: 2px solid var(--toggle-switch);
+    padding: 8px 12px 8px 12px;
+    font-family: 'Quicksand', sans-serif;
+    transition: 200ms;
+    border-radius: 40px;
+    float: left;
+    margin-left: 25px;
+}
+
+.footer-links li 
+{
+  display:inline;
+  padding: 12px;
+}
+
+.footer-links a
+{
+    color:rgb(95, 83, 60);
+    text-decoration: none;
+}
+
+.footer-links a:active,.footer-links a:focus,.btn-btn:hover
+{
+    background-color: var(--toggle-switch);
+    border-color: var(--toggle-switch);
+    color:white;
+    font-weight: 600;
+    text-decoration:none;
+    outline: none;
+    cursor: pointer;
+}
+
+.footer-links.inline li
+{
+  display:inline-block
+}
+
+
+.site-footer .social-icons
+{
+  margin-bottom: -30px;
+  text-align:right;
+}
+
+.site-footer .social-icons a
+{
+  width:45px;
+  height:45px;
+  line-height:44px;
+  margin-right:0;
+  border-radius:100%;
+  border: 1.6px solid  var(--toggle-switch);
+  transition: all 200ms;
+}
+
+.social-icons
+{
+  padding-right:20px;
+  margin-bottom:0;
+  list-style:none;
+}
+
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:6px;
+  margin: 5px;
+}
+
+.social-icons a{
+  color: var(--toggle-switch);
+  font-size:15px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:10px;
+  border-radius:100%;
+}
+
+.social-icons a.facebook:hover{
+    background-color: #3b5998;
+    color: white;
+    border-color: #3b5998;
+    transition: all 200ms;
+  }
+
+ .social-icons a.twitter:hover{
+    background-color: #55acee;
+    color: white;
+    border-color: #55acee;
+    transition: all 200ms;
+}
+
+.social-icons a.instagram:hover
+{
+    background: #F56040;
+    color: white;
+    border-color: #F56040;
+    transition: all 200ms;
+}
+
+.copyright-text
+{
+  color:var(--toggle-switch);
+  text-align: left;
+  margin-left: 25px;
+  margin-bottom: -10px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+
+/*------------- LOGIN---------------*/
+.grid-banklogin{
+    display: grid;
+    grid-template-columns: 2fr 2fr 0.5fr;
+    grid-template-rows: 1fr 1.4fr 2fr 2fr;
+    /*grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    background-color: aquamarine;*/
+    height: 47em;
+    grid-template-areas: 
+                    "ltop     ltop  lbnk"
+                    "lcover-pic  llogin   llogin"
+                    "lcover-pic  llogin   llogin"
+                    "lcover-pic  llogin   llogin";
+}
+
+.ltop{
+    grid-area: ltop;
+    background: var(--lnavcolor);
+}
+
+.lbnk{
+    grid-area: lbnk;
+    background: var(--lnavcolor);
+}
+
+.lcover-pic{
+    grid-area: lcover-pic;
+    background: var(--mainh5);
+}
+
+.llogin{
+    grid-area: llogin;
+    background: var(--mainh5);
+}
+
+.lbnk h2{
+    color: var(--fontcolors);
+    padding: 15px 0 0 50px;
+    font-size: 5em;
+    font-family: 'Megrim', cursive;
+    font-weight: 400;
+}
+
+.banking-btnl{   
+    margin-left: 50px;
+    border: none;
+    background: var(--lbbtn);
+    color: var(--lbbtn2);
+    margin-top: 30px;
+    margin-right: 40px;
+    border-radius: 100%;
+    padding: 10px 20px;
+    font-size: 1.8em;
+    font-family: Quicksand;
+    font-weight: 400;
+    transition: all 250ms;
+    display: block;
+}
+
+.banking-btnl:hover{
+    background: var(--mainh5);
+    cursor: pointer;
+    outline: none;
+}
+
+.lcover-pic img{
+    background-size: cover;
+    padding: 55px;
+    margin-left: 40px;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+}
+
+.llogin h3{
+    font-family: Quicksand;
+    color: var(--lh3color1);
+    font-size: 3em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#plogin{
+    text-align: center;
+    padding-top: 140px;
+}
+
+.email,.pswd     /*textbox style*/
+ {
+   border-radius: 50px;
+   padding: 15px;
+   width: 300px;
+   height: 45px;
+   border: 0;
+   background: var(--lnavcolor);
+   color: var(--lh3color2);
+   font-family: Quicksand;
+   font-weight: bold;
+   letter-spacing: 0.5px;
+   font-size: 18px;
+   outline: none;
+}
+
+.btns li{
+    display:inline-block;
+    padding: 0 45px 0 45px;
+    list-style: none;
+    margin: -20px;
+}
+
+.btns li .fp{
+    font-size: 1.1em;
+    font-family: Quicksand;
+    font-weight: bold;
+    color: var(--lh3color1);
+    text-decoration: none;
+    transition: 150ms;
+}
+
+.btns li .fp:hover{
+    color: var(--loginheading2);
+}
+
+.details p5 {
+    font-size: 1.2em;
+    font-family: Quicksand;
+}
+
+.new-acc{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 200ms;
+}
+
+.new-acc:hover{
+    color: #737373;
+}
+
+.create-acc{
+    position: relative;
+    display: inline-block;
+    margin: 20px 10px 0 0;
+}
+
+.accbtn{
+    background: none;
+    font-size: 1.4em;
+    font-weight: bold;
+    border: none;
+    color: var(--lh3color1);
+    font-family: Quicksand;
+    margin: 8px 12px 0 0;
+    border-radius: 30px;
+    transition: all 250ms;
+}
+
+.dropdown-details {
+    top: 35px;
+    right: 0px;
+    display: none;
+    position: absolute;
+    padding: 10px;
+    background: var(--linputcolor1);
+    min-width: 180px;
+    min-height: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);  
+}
+
+.dropdown-details a {
+    color: var(--lh3color1);
+    text-decoration: none;
+    transition: 200ms;
+    font-family: Quicksand;
+    padding: 20px 15px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.dropdown-details a:hover {
+    color: var(--loginheading2);
+    font-size: 1.5em;
+    font-weight: bold;
+    border-radius: 40px;
+}
+
+.create-acc:hover .dropdown-details{
+    display: block;
+    padding: 10px;
+    border-radius: 30px;
+}
+  
+.create-acc:hover .accbtn {
+    color: var(--lcreateacc);
+}
+
+.llogin-bt{              /*login button*/
+    background-color: var(--mainh5);
+    color: var(--lh3color1);
+    font-size: 16px;
+    border: 2px solid var(--lh3color1);
+    font-family: Quicksand;
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 10px 23px;
+    letter-spacing: 1px;
+    outline: none;
+}
+
+.llogin-bt:hover{
+    background-color: var(--lh3color);
+    border-color: var(--lh3color);
+    color: white;
+}
+
+#t-btn{
+    margin: 3em -0.5em 0 0;
+    color: var(--toggle);
+    background: var(--mainh5);
+}
+
+/*------------------Contact page-----------------*/
+.grid-abtcntpg{
+    display: grid;
+    grid-template-columns: 0.5fr 2.2fr 1.3fr;
+    grid-template-rows: 0.3fr 0.2fr 0.2fr 0.5fr 0.5fr 0.5fr;
+    /*grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    background-color: orange;*/
+    height: 47em;
+    grid-template-areas: 
+                    "back   wh1  cnt-logo"
+                    "wh2    wh2   about-pic"
+                    "cntmain   cntmain    about-pic"
+                    "ab-name1   ab-name1    about-pic"
+                    "ab-name2   ab-name2    about-pic"
+                    "ab-name3   ab-name3    ab-add";
+}
+
+.back{
+    grid-area: back;
+}
+
+.wh1{
+    grid-area: wh1;
+}
+
+.wh2{
+    grid-area: wh2;
+}
+
+.cnt-logo{
+    grid-area: cnt-logo;
+}
+
+.back,.wh1,.cnt-logo{
+    background: white;
+}
+
+.cntmain{
+    grid-area: cntmain;
+}
+
+.about-pic{
+    grid-area: about-pic;
+}
+
+.ab-name1{
+    grid-area: ab-name1;
+}
+
+.ab-name2{
+    grid-area: ab-name2; 
+}
+
+.ab-name3{
+    grid-area: ab-name3;
+}
+
+.ab-add{
+    grid-area: ab-add;
+}
+
+.wh2,.cntmain,.ab-name1,.ab-name2,.ab-name3,.ab-add,.about-pic{
+    background: beige;
+    color: rgb(104, 92, 67);
+}
+
+.cnt-logo h2{
+    text-align: right;
+    font-weight: 500;
+    font-size: 5.5em;
+    font-family: 'Megrim', cursive;
+    color: rgb(116, 99, 65);
+    padding-right: 60px;
+}
+
+.cntmain h1{
+    font-family: Quicksand;
+    font-size: 3.5em;
+    text-align: center;
+}
+
+.about-pic img{
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    border-radius: 40px;
+}
+
+.cnt-details,.cnt-details1{
+    display: inline-block;
+    list-style-type: none;
+}
+
+.cnt-details{
+    font-family: Quicksand;
+    float: left;
+    padding: 1.5em 0 0 6em;
+}
+
+.cnt-details h3,.cnt-details1 h3,.ab-add h3{
+    font-size: 1.8em;
+}
+
+.cnt-details h2,.cnt-details1 h2,.ab-add h2{
+    font-size: 2em;
+}
+
+.cnt-details1{
+    font-family: Quicksand;
+    float: right;
+    padding: 1.5em 6em 0 0;
+}
+
+.ab-add ul li{
+    list-style-type: none;
+    font-family: Quicksand;
+    text-align: center;
+}
+
+#abadd{
+    margin-top: 25px;
+}
+
+/*--------------about page----------------*/
+.grid-about{
+    display: grid;
+    grid-template-columns: 0.5fr 2.2fr 1.5fr;
+    grid-template-rows: 0.3fr 0.6fr 2fr;
+    /*grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    background-color: orange;*/
+    height: 47.2em;
+    grid-template-areas:
+                    "ab-back    ab-wh1      ab-logo"
+                    "ab-main    ab-main     about-pic2"
+                    "ab-main    ab-main     about-pic2";
+}
+
+.ab-back {
+    grid-area: ab-back;
+}
+
+.ab-wh1 {
+    grid-area: ab-wh1;
+}
+
+.ab-logo{
+    grid-area: ab-logo;
+}
+
+.ab-back,.ab-wh1,.ab-logo{
+    background: white;
+}
+
+.ab-main{
+    grid-area: ab-main;
+    padding-top: 7em;
+}
+
+.about-pic2{
+    grid-area: about-pic2;
+}
+
+.ab-main,.about-pic2{
+    background: beige;
+    color: rgb(104, 92, 67);
+}
+
+.ab-logo h2{
+    text-align: right;
+    font-weight: 500;
+    font-size: 5.5em;
+    font-family: 'Megrim', cursive;
+    color: rgb(116, 99, 65);
+    padding-right: 60px;
+}
+
+.ab-main h1{
+    font-family: Quicksand;
+    font-size: 3.5em;
+    text-align: center;
+}
+
+.ab-para{
+    font-family: Quicksand;
+    font-size: 2.1em;
+    padding-left: 1em;
+    text-align: justify;
+}
+
+.about-pic2 img{
+    margin-top: 60px;
+    background-size: cover;
+    width: 100%;
+    height: 80%;
+    padding: 30px;
+    border-radius: 60px;
+}
+/*-------------PERSONAL REGISTRATION-----------------*/
+.grid-login{
+    display: grid;
+    grid-template-columns: 2fr 2fr 0.5fr;
+    grid-template-rows: 1fr 1.4fr 2fr 2fr;
+    /*grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    background-color: aquamarine;*/
+    height: 47.1em;
+    grid-template-areas: 
+                    "top     top  bnk"
+                    "cover-pic  login   login"
+                    "cover-pic  login   login"
+                    "cover-pic  login   login";
+}
+
+.top{
+    grid-area: top;
+}
+
+.bnk{
+    grid-area: bnk;
+}
+
+.cover-pic{
+    grid-area: cover-pic;
+    background: beige;
+}
+
+.login{
+    grid-area: login;
+    background-color: beige;
+}
+
+.banking-btnp{   
+    margin-left: 50px;
+    border: none;
+    background: transparent;
+    color: rgb(104, 92, 67);
+    margin-top: 30px;
+    margin-right: 40px;
+    border-radius: 100%;
+    padding: 10px 20px;
+    font-size: 1.8em;
+    font-family: Quicksand;
+    font-weight: 400;
+    transition: all 250ms;
+    display: block;
+}
+
+.banking-btnp:hover{
+    background: beige;
+    cursor: pointer;
+    outline: none;
+}
+
+.bnk h2{
+    padding: 15px 0 0 50px;
+    font-size: 5em;
+    color: rgb(104, 92, 67);
+    font-family: 'Megrim', cursive;
+    font-weight: 400;
+}
+
+.cover-pic img{
+    background-size: cover;
+    padding: 55px;
+    margin-left: 40px;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+}
+
+.login h4{
+    font-family: Quicksand;
+    color: rgb(104, 92, 67);
+    font-size: 2.8em;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: -43px;
+}
+
+.login{
+    text-align: center;
+    padding-top: 30px;
+}
+
+.fn,.sn,.gd,.dob     /*textbox style*/
+ {
+   border-radius: 50px;
+   padding: 15px;
+   margin: 1px;
+   width: 245px;
+   height: 45px;
+   border: 0px;
+   background: white;
+   font-family: Quicksand;
+   font-weight: bold;
+   color: rgb(104, 92, 67);
+   font-size: 18px;
+   outline: none;
+}
+
+.gd,.dob{
+    padding: 2px 0 0px 15px;
+    font-size: 17px;
+}
+
+.em,.mob,.add,.pwd,.cfpwd     /*textbox style*/
+ {
+   border-radius: 50px;
+   padding: 15px;
+   width: 500px;
+   height: 45px;
+   border: 0px;
+   background: white;
+   font-family: Quicksand;
+   font-weight: bold;
+   color: rgb(104, 92, 67);
+   font-size: 17px;
+   outline: none;
+}
+
+.login-bt{              /*login button*/
+    background-color: beige;
+    color: rgb(104, 92, 67);
+    font-size: 16px;
+    border: 2px solid rgb(104, 92, 67);
+    font-family: Quicksand;
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 10px 23px;
+    letter-spacing: 1px;
+    outline: none;
+    margin-top: 0.8em;
+}
+
+.login-bt:hover{
+    background-color: rgb(104, 92, 67);
+    border-color: rgb(104, 92, 67);
+    color: white;
+}
+
+.tnc{
+    font-family: Quicksand;
+    font-weight: bold;
+    color: rgb(104, 92, 67);
+    padding-right: 14em;
+}
+
+.tnc a{
+    color: rgb(48, 143, 221);
+}
+
+.tnc a:hover{
+    color: blue;
+}
+/*--------------BUSINESS REGISTRATION--------------*/
+.login h3{
+    font-family: Quicksand;
+    color: rgb(104, 92, 67);
+    font-size: 3em;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.org,.eml,.phno,.addr,.pwrd,.cfpwrd     /*textbox style*/
+ {
+   border-radius: 50px;
+   padding: 18px;
+   width: 400px;
+   height: 45px;
+   border: 0px;
+   background: white;
+   color: rgb(104, 92, 67);
+   font-family: Quicksand;
+   font-weight: bold;
+   font-size: 17px;
+   outline: none;
+   letter-spacing: 0.4px;
+}
+
+.tnc1{
+    font-family: Quicksand;
+    font-weight: bold;
+    color: rgb(104, 92, 67);
+    padding-right: 7.5em;
+}
+
+.tnc1 a{
+    color: rgb(48, 143, 221);
+}
+
+.tnc1 a:hover{
+    color: blue;
+}
+/*-------------Personal dashboard---------------*/
+.grid-dashboard{
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 2.5fr 1fr;
+    grid-template-rows: 0.65fr 0.4fr 0.5fr 0.5fr 0.5fr 0.45fr 0.5fr;
+    /*grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    background-color: aquamarine;*/
+    height: 47.3em;
+    grid-template-areas:
+                "dlogo  dbname1  dbname1  logout1"
+                "b1     pname    b-6  b-6"
+                "home   pname    b-6  b-6"
+                "ptransfer   pacc-number  b-7  b-7"
+                "b2   pacc-number  b-7  b-7"
+                "b3     b-5      b-8     b-8"
+                "b4     b-5      b-8      b-8";
+}
+    
+.dlogo{
+    grid-area: dlogo;
+}
+
+.b1{
+    grid-area: b1;
+}
+
+.home{
+    grid-area: home;
+}
+
+.ptransfer{
+    grid-area: ptransfer;
+}
+
+.b2{
+    grid-area: b2;
+}
+
+.b3{
+    grid-area: b3;
+}
+
+.b4{
+    grid-area: b4;
+}
+
+.dbname1{
+    grid-area: dbname1  ;
+}
+
+.pname{
+    grid-area: pname;
+}
+
+.pacc-number{
+    grid-area: pacc-number;
+}
+
+.b-5{
+    grid-area: b-5;
+}
+
+.c-3{
+    grid-area: c-3;
+}
+
+.b-6{
+    grid-area: b-6;
+}
+
+.b-7{
+    grid-area: b-7;
+}
+
+.b-8{
+    grid-area: b-8;
+}
+
+.logout1{
+    grid-area: logout1;
+}
+
+.dlogo,.b1,.home,.ptransfer,.b2,.b3,.b4{
+    background: #EAEAEA;
+}
+
+.dbname1,.logout1{
+    background: whitesmoke;
+}
+.pname,.pacc-number,.b-5,.c-3,.b-6,.b-8{
+    background: white;
+}
+
+.dlogo{
+    font-family: 'Megrim', cursive;
+    font-size: 3.5em;
+    text-align: center;
+    padding-top: 5px;
+    color: #535353;
+}
+
+.b1{
+    border: 2px solid #EAEAEA;
+    border-bottom-color: rgb(150, 150, 150);
+}
+
+.b1 h2{
+    font-family: Quicksand;
+    text-align: center;
+    font-size: 2em;
+    padding-top: 10px;
+    font-weight: bolder;
+    color: #535353;
+}
+
+.home a,.ptransfer a,.b2 a,.b3 a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.transfer h3{
+    margin-top: 10px;
+}
+
+.home h3{
+    margin-top: 38px;
+}
+
+.b2 h3{
+    margin-top: 6px;
+}
+
+.ptransfer h4:hover{
+    color: #2c2c2c;
+    cursor: pointer;
+    background-color: gainsboro;
+}
+
+.b3 h4:hover{
+    color: white;
+    cursor: pointer;
+    background-color: #5f939a;
+    border-radius: 10px;
+}
+
+.dbname1{
+    font-family: Quicksand;
+    font-size: 2.7em;
+    padding: 40px 0 0 50px;
+    color: #243c3f;
+}
+
+h4{
+    text-align: center;
+    padding-top: 21px;
+}
+
+.plogout-btn{
+    background-color: transparent;
+    border: 2px solid #314e52;
+    color: #314e52;
+    padding: 16px 20px;
+    border-radius: 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: Quicksand;
+    margin-top: 22px;
+    outline: none;
+    transition: 250ms;
+}
+
+.plogout-btn:hover{
+    background-color: #314e52;
+    color: white;
+    font-size: 1.25em;
+    cursor: pointer;
+    outline: none;
+}
+
+#signout{
+    transform: rotate(180deg);
+}
+
+.logout-btn{
+    background-color: transparent;
+    border: 2px solid #9b9b7a;
+    color: black;
+    padding: 16px 20px;
+    border-radius: 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: Quicksand;
+    margin-top: 30px;
+    outline: none;
+    transition: 250ms;
+}
+
+.logout-btn:hover{
+    background-color: #9b9b7a;
+    color: white;
+    font-size: 1.25em;
+    cursor: pointer;
+    outline: none;
+}
+
+.pacc-number h2{
+    font-family: Quicksand;
+    font-size:em;
+    text-align: center;
+    padding: 55px 20px 0 0;
+}
+
+.b-7 h2,.b-6 h3,.b-8 h2{
+    font-family: Quicksand;
+    font-size: 2.2em;
+    text-align: center;
+    font-weight: bold;
+    padding: 45px 0 0 150px;
+}
+
+.b-6 h3{
+    font-size: 1.7em;
+    padding-top: 55px;
+}
+
+.b-6 h4{    /*pdetails email*/
+    font-family: Quicksand;
+    font-size: 2.2em;
+    text-align: right;
+    font-weight: bold;
+    padding: 45px 135px 0 0;
+}
+
+.b-5 h2{
+    font-family: Quicksand;
+    font-size: 2.2em;
+    font-weight: bold;
+    padding: 45px 0 0 140px;
+}
+
+.ch1,.ch12{
+    display: inline-block;
+    font-family: Quicksand;
+    font-size: 1.8em;
+    font-weight: bold;
+    padding: 50px 0 0 250px;
+}
+
+.ch12{
+    padding: 45px 0 0 170px;
+}
+
+#gender h3,#pdob h3{
+    text-align: center;
+    font-family: Quicksand;
+    font-weight: 600;
+    font-size: 1.2em;
+    line-height: 20px;
+    padding: 0 10px 0 0;
+}
+
+.pd1{ 
+    float: left;
+}
+
+.pd12{
+    float: left;
+    margin-left: -3em;
+}
+
+#r-icon{
+    font-size:28px;
+}
+
+#yemail h3{     /*pdetails email*/
+    text-align: right;
+    font-family: Quicksand;
+    font-size: 1.9em;
+    font-weight: bold;
+    padding: 0px 85px 0 0;
+}
+
+#time1 h3{
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0 0 0 150px;
+}
+
+#value12 h3{    /*wallet balance*/
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 0 0 0 150px;
+}
+
+#value1 h3{     /*branch indore*/
+    float: left;
+    font-family: Quicksand;
+    font-size: 2em;
+    font-weight: bold;
+    padding-left: 150px;
+}
+
+#value9 h3{     /*Mobile no*/
+    float: left;
+    font-family: Quicksand;
+    font-size: 2em;
+    font-weight: bold;
+    padding-left: 145px;
+}
+/*--------------ptransfer & paddmoney--------------*/
+.grid-transfer{
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 2.5fr 1fr;
+    grid-template-rows: 0.65fr 0.4fr 0.5fr 0.5fr 0.5fr 0.45fr 0.5fr;
+    /*grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    background-color: aquamarine;*/
+    height: 47.3em;
+    grid-template-areas:
+                "dlogo  dbname1  dbname1  logout1"
+                "b1     pname    b-6  b-6"
+                "home   pname    b-6  b-6"
+                "ptransfer   pacc-number  b-6  b-6"
+                "b2   pacc-number  b-6  b-6"
+                "b3     b-5      b-6      b-6"
+                "b4     b-5      b-6      b-6";
+}
+    
+.dlogo{
+    grid-area: dlogo;
+}
+
+.b1{
+    grid-area: b1;
+}
+
+.home{
+    grid-area: home;
+}
+
+.ptransfer{
+    grid-area: ptransfer;
+}
+
+.b2{
+    grid-area: b2;
+}
+
+.b3{
+    grid-area: b3;
+}
+
+.b4{
+    grid-area: b4;
+}
+
+.dbname1{
+    grid-area: dbname1;
+}
+
+.pname{
+    grid-area: pname;
+}
+
+.pacc-number{
+    grid-area: pacc-number;
+}
+
+.b-5{
+    grid-area: b-5;
+}
+
+.c3{
+    grid-area: c3;
+}
+
+.b-6{
+    grid-area: b-6;
+}
+
+.logout1{
+    grid-area: logout1;
+}
+
+.branch{
+    grid-area: branch;
+}
+
+.dlogo,.b1,.home,.ptransfer,.b2,.b3,.b4{
+    background: #314e52;
+}
+
+.dbname1,.logout1{
+    background:#a2d0c1;
+}
+.pname,.pacc-number,.b-5,.c3,.b-6,.b7,.b-7,.pbranch,.branch{
+    background: white;
+}
+
+.dlogo{
+    font-family: 'Megrim', cursive;
+    font-size: 3.5em;
+    text-align: center;
+    padding-top: 5px;
+    color: white;
+}
+
+.b1{
+    border: 2px solid #314e52;
+    border-bottom-color: white;
+}
+
+.b1 h2{
+    font-family: Quicksand;
+    text-align: center;
+    font-size: 2em;
+    padding-top: 10px;
+    font-weight: bolder;
+    color: white;
+}
+
+.home h3,.ptransfer h3,.b2 h3,.b3 h4,.b4 h4{
+    font-family: Quicksand;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: 600;
+    transition: 250ms;
+    color: white;
+    padding: 5px;
+}
+
+.home a,.ptransfer a,.b2 a,.b4 a{
+    color: #666565;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.home h3{
+    margin-top: 30px;
+}
+
+.ptransfer h3{
+    margin-top: 15px;
+}
+
+.b2 h3{
+    margin-top: 5px;
+}
+
+.b3 h4{
+    margin-top: -6px;
+}
+
+.b4 h4{
+    margin-top: -8px;
+}
+
+.b2 h3:hover{
+    color: white;
+    cursor: pointer;
+    background-color: #5f939a;
+    border-radius: 10px;
+}
+
+.home h3:hover{
+    color: white;
+    cursor: pointer;
+    background-color: #5f939a;
+    border-radius: 10px;
+}
+
+.ptransfer h3:hover{
+    color: white;
+    cursor: pointer;
+    background-color: #5f939a;
+    border-radius: 10px;
+}
+
+.b4 h4:hover{
+    color: white;
+    cursor: pointer;
+    background-color: #5f939a;
+    border-radius: 10px;
+}
+
+.dbname1{
+    font-family: Quicksand;
+    font-size: 2.6em;
+    padding: 40px 0 0 50px;
+}
+
+h4{
+    text-align: center;
+    padding-top: 21px;
+}
+
+.pname h2{
+    text-transform: uppercase;
+}
+
+.pname h2,.pacc-number h2,.b5 h2{
+    font-family: Quicksand;
+    font-size: 2.2em;
+    text-align: center;
+    padding-top: 64px;
+    font-weight: bold;
+}
+
+.pname h2{
+    font-size: 2.6em;
+    font-weight: bolder;
+}
+
+.pacc-number h2{
+    padding: 50px 0 0 20px;
+}
+
+.b7 h2{
+    font-family: Quicksand;
+    font-size: 2.2em;
+    text-align: right;
+    font-weight: bold;
+    padding: 45px 0 0 5px;
+}
+
+.b5 h2{
+    float: left;
+    padding: 0 0 0 75px;
+}
+
+#value h3{
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 2em;
+    padding-left: 35px;
+    font-weight: bold;
+}
+
+
+#value1 h3{
+    text-align: right;
+    font-family: Quicksand;
+    font-size: 2em;
+    font-weight: bold;
+    padding-right: 12px;
+}
+
+.b-6 h2{
+    font-family: Quicksand;
+    font-size: 3.3em;
+    font-weight: bold;
+    padding-top: 60px;
+}
+
+#ft{
+    text-align: center;
+}
+
+.side-names{
+    display: inline-block;
+    width: 15em;
+    font-family: Quicksand;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.yacc-no,.b-accno{
+    border-radius: 5px;
+    border: 2px solid gray;
+    padding: 15px;
+    width: 300px;
+    height: 45px;
+    font-family: Quicksand;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+    letter-spacing: 1.5px;
+    background: transparent;
+    outline: none;
+
+}
+
+.amt1{
+    border-radius: 5px;
+    border: 2px solid gray;
+    padding: 15px;
+    width: 300px;
+    height: 45px;
+    margin-right: 20px;
+    border-radius: 5px;
+    font-family: Quicksand;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+    letter-spacing: 1.5px;
+    background: transparent;
+    outline: none;
+}
+
+
+/*------------Business dashboard--------------*/
+.grid-businessd{
+    display: grid;
+    grid-template-columns: 1.3fr 2fr 2.5fr 1fr;
+    grid-template-rows: 0.65fr 0.4fr 0.5fr 0.5fr 0.5fr 0.5fr 0.6fr;
+    /*grid-column-gap: 8px;
+    grid-row-gap: 10px;
+    background-color: teal;*/
+    height: 47.3em;
+    grid-template-areas:
+                "blogo  dbname  dbname  logout"
+                "b12     name1    name1  name1"
+                "home2   name1    name1  name1"
+                "transfer2   acc-number    b6  b6"
+                "b22   acc-number  b6  b6"
+                "b32     b5      c3      c3"
+                "b42     b5      c3      c3";
+}
+    
+.blogo{
+    grid-area: blogo;
+    border-radius: 0 50px 0 0;
+}
+
+.b12{
+    grid-area: b12;
+}
+
+.home2{
+    grid-area: home2;
+}
+
+.transfer2{
+    grid-area: transfer2;
+}
+
+.b22{
+    grid-area: b22;
+}
+
+.b32{
+    grid-area: b32;
+}
+
+.b42{
+    grid-area: b42;
+    border-radius: 0 0 50px 0;
+}
+
+.dbname{
+    grid-area: dbname;
+}
+
+.name1{
+    grid-area: name1;
+    border-radius: 10px;
+    margin: 8px;
+}
+
+.acc-number{
+    grid-area: acc-number;
+}
+
+.b5{
+    grid-area: b5;
+}
+
+.c3{
+    grid-area: c3;
+}
+
+.b6{
+    grid-area: b6;
+}
+
+.logout{
+    grid-area: logout;
+}
+
+.branch{
+    grid-area: branch;
+}
+
+.blogo,.b12,.home2,.transfer2,.b22,.b32,.b42{
+    background: #9b9b7a;
+}
+
+.dbname,.logout{
+    background: white;
+}
+.acc-number,.b5,.c3,.b6,.b7,.branch{
+    background: white;
+}
+
+.name1{
+    background: #afaf8a;
+}
+
+.blogo{
+    font-family: 'Megrim', cursive;
+    font-size: 3.5em;
+    text-align: center;
+    padding-top: 5px;
+    color: #333533;
+}
+
+.b12{
+    border: 2px solid #9b9b7a;
+    border-bottom-color: #4a4d3a;
+}
+
+.b12 h2{
+    font-family: Quicksand;
+    text-align: center;
+    font-size: 2em;
+    padding-top: 10px;
+    font-weight: bolder;
+    color: #333533;
+}
+
+.home2 h3,.transfer2 h3,.b22 h3,.b32 h4,.b42 h4{
+    font-family: Quicksand;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: 600;
+    transition: 250ms;
+    color: #333533;
+    padding: 5px;
+}
+
+.home2 a,.transfer2 a,.b22 a,.b32 a,.b42 a{
+    color: #333533;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.home2 h3{
+    margin-top: 30px;
+}
+
+.transfer2 h3{
+    margin-top: 20px;
+}
+
+.b22 h3{
+    margin-top: 14px;
+}
+
+.b32 h4{
+    margin-top: 8px;
+}
+
+.b42 h4{
+    margin-top: -3px;
+}
+
+.b22 h3:hover{
+    color: whitesmoke;
+    cursor: pointer;
+    background-color: #797d62;
+}
+
+.home2 h3:hover{
+    color: whitesmoke;
+    cursor: pointer;
+    background-color: #797d62;
+}
+
+.transfer2 h3:hover{
+    color: whitesmoke;
+    cursor: pointer;
+    background-color: #797d62;
+}
+
+.b32 h4:hover{
+    color: whitesmoke;
+    cursor: pointer;
+    background-color: #797d62;
+}
+
+.b42 h4:hover{
+    color: whitesmoke;
+    cursor: pointer;
+    background-color: #797d62;
+}
+
+.dbname{
+    color: #3a3a3a;
+    font-family: Quicksand;
+    font-size: 2.6em;
+    padding: 40px 0 0 50px;
+}
+
+h4{
+    text-align: center;
+    padding-top: 21px;
+}
+
+.acc-number h2,.b6 h2,.c3 h2{
+    font-family: Quicksand;
+    font-size: 2.2em;
+    text-align: center;
+    padding: 47px 20px 0 0;
+    font-weight: bold;
+}
+
+.name1 h2{
+    color: white;
+    font-family: Quicksand;
+    font-size: 3em;
+    text-align: center;
+    padding: 45px 20px 0 0;
+    font-weight: bold;
+}
+
+.acc-number h2{
+    padding: 50px 20px 0 0;
+}
+
+.b5 h4{
+    text-align: center; 
+    padding: 40px 35px 0 0;
+    font-size: 2.2em;
+    font-family: Quicksand;
+}
+
+#badd-sn{
+    padding-right: 30px;
+}
+
+#value-p h3{
+    padding-top: 0;
+    padding-left: 20px;
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 2em;
+    font-weight: bold;
+    padding-top: 0;
+    padding-right: 15px;
+}
+
+#value h3{
+    padding-top: 0;
+    padding-right: 70px;
+}
+
+#value3 h3{
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 2em;
+    font-weight: bold;
+    padding-top: 0;
+    padding-right: 45px;
+}
+
+#value1 h3{
+    text-align: center;
+    font-family: Quicksand;
+    font-size: 2em;
+    font-weight: bold;
+    padding-right: 12px;
+}
+
+/*---------b-transfer---------*/
+.grid-btransfer{
+    display: grid;
+    grid-template-columns: 1.3fr 2fr 2.5fr 1fr;
+    grid-template-rows: 0.65fr 0.4fr 0.5fr 0.5fr 0.5fr 0.5fr 0.6fr;
+    /*grid-column-gap: 8px;
+    grid-row-gap: 10px;*/
+    background-color: white;
+    height: 47.3em;
+    grid-template-areas:
+                "blogo  dbname  dbname  logout"
+                "b12     name1    name1  name1"
+                "home2   name1    name1  name1"
+                "transfer2   acc-number    b6  b6"
+                "b22   acc-number  b6  b6"
+                "b32     b52      b6      b6"
+                "b42     b52      b6      b6";
+}
+
+.b52{
+    grid-area: b52;
+}
+
+.b52 h2{
+    padding: 55px 0 0 7px;
+}
+
+.b52 h2{
+    font-family: Quicksand;
+    font-size: 2.2em;
+    text-align: center;
+    padding: 55px 20px 0 0;
+    font-weight: bold;
+}
+
+.acc-number,.b52,.c3,.b6,.b7,.branch{
+    background: white;
+}
+
+.b6 h3{
+    font-family: Quicksand;
+    font-size: 3em;
+    font-weight: bold;
+    padding-top: 18px;
+}
+
+#ft{
+    text-align: center;
+}
+
+.side-names{
+    display: inline-block;
+    width: 15em;
+    font-family: Quicksand;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+/*------personal side button----------*/
+
+.t-btn1{              /*submit button*/
+    background-color: #314e52;
+    color: white;
+    float: right;
+    width: 15%;
+    margin-right: 135px;
+    font-size: 18px;
+    font-family: Quicksand;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 15px 20px;
+    letter-spacing: 1px;
+    outline: none;
+    border: none;
+}
+
+.t-btn1:hover{
+    opacity: 0.8;
+}
+
+/*------business side button----------*/
+
+.t-btn{              /*submit button*/
+    background-color: #9b9b7a;
+    color: white;
+    float: right;
+    width: 15%;
+    margin-right: 135px;
+    font-size: 18px;
+    font-family: Quicksand;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 15px 20px;
+    letter-spacing: 1px;
+    outline: none;
+    border: none;
+}
+
+.t-btn:hover{
+    opacity: 0.8;
+}
+
+/*--------business account details----------*/
+
+.grid-bdetails{
+    display: grid;
+    grid-template-columns: 1.3fr 2fr 2.5fr 1fr;
+    grid-template-rows: 0.65fr 0.4fr 0.5fr 0.5fr 0.5fr 0.5fr 0.6fr;
+    /*grid-column-gap: 8px;
+    grid-row-gap: 10px;
+    background-color: teal;*/
+    height: 47.3em;
+    grid-template-areas:
+                "det-logo       x7      x7      det-logout"
+                "x1     bacc-details    bacc-details    bacc-details"
+                "x2     bacc-details    bacc-details    bacc-details"
+                "x3     bacc-details    bacc-details    bacc-details"
+                "x4     bacc-details    bacc-details    bacc-details"
+                "x5     bacc-details    bacc-details    bacc-details"
+                "x6     bacc-details    bacc-details    bacc-details";
+}
+
+.det-logo{
+    grid-area: det-logo;
+    border-radius: 0 50px 0 0;
+}
+
+.det-logout{
+    grid-area: det-logout;
+}
+
+.x1{
+    grid-area: x1;
+}
+
+.x2{
+    grid-area: x2;
+}
+
+.x3{
+    grid-area: x3;
+}
+
+.x4{
+    grid-area: x4;
+}
+
+.x5{
+    grid-area: x5;
+}
+
+.x6{
+    grid-area: x6;
+    border-radius: 0 0 50px 0;
+}
+
+.x7{
+    grid-area: x7;
+}
+
+.det-logo,.x1,.x2,.x3,.x4,.x5,.x6{
+    background: #9b9b7a;
+}
+
+.bacc-details{
+    grid-area: bacc-details;
+}
+
+.det-logo{
+    font-family: 'Megrim', cursive;
+    font-size: 3.5em;
+    text-align: center;
+    padding-top: 5px;
+    color: #333533;
+}
+
+.x7{
+    color: #3a3a3a;
+    font-family: Quicksand;
+    font-size: 2.6em;
+    padding: 40px 0 0 50px;
+}
+
+.x1{
+    border: 2px solid #9b9b7a;
+    border-bottom-color: #4a4d3a;
+}
+
+.x1 h2{
+    font-family: Quicksand;
+    text-align: center;
+    font-size: 2em;
+    padding-top: 10px;
+    font-weight: bolder;
+    color: #333533;
+}
+
+.x2 h3,.x3 h3,.x4 h3,.x5 h4,.x6 h4{
+    font-family: Quicksand;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: 600;
+    transition: 250ms;
+    color: #333533;
+    padding: 5px;
+}
+
+.x2 a,.x3 a,.x4 a,.x5 a,.x6 a{
+    color: #333533;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.x2 h3{
+    margin-top: 30px;
+}
+
+.x3 h3{
+    margin-top: 20px;
+}
+
+.x4 h3{
+    margin-top: 14px;
+}
+
+.x5 h4{
+    margin-top: 8px;
+}
+
+.x6 h4{
+    margin-top: -3px;
+}
+
+.x2 h3:hover{
+    color: whitesmoke;
+    cursor: pointer;
+    background-color: #797d62;
+}
+
+.x3 h3:hover{
+    color: whitesmoke;
+    cursor: pointer;
+    background-color: #797d62;
+}
+
+.x4 h3:hover{
+    color: whitesmoke;
+    cursor: pointer;
+    background-color: #797d62;
+}
+
+.x5 h4:hover{
+    color: whitesmoke;
+    cursor: pointer;
+    background-color: #797d62;
+}
+
+.x6 h4:hover{
+    color: whitesmoke;
+    cursor: pointer;
+    background-color: #797d62;
+}
+
+.bacc-val1,.bacc-val2{
+    display: inline-block;
+    list-style-type: none;
+    margin: 30px;
+    font-family: Quicksand;
+    line-height: 70px;
+    text-align: center;
+    padding: 1em 0 0 0em;
+    color: #333533;
+    letter-spacing: 0.5px;
+}
+
+.bacc-val1{
+    margin: 3em 0 0 9em;
+}
+
+.bacc-val2{
+    margin: 3em 0 0 11em;
+}
+
+.bacc-val1 h2,.bacc-val2 h2{      /*org*/
+    font-size: 2em;
+}
+
+.bacc-val2 h2{
+    text-transform: uppercase;
+}
+
+.bacc-val1 h3,.bacc-val2 h3{
+    font-size: 1.8em;
+}
+
+.bacc-val1 li:first-child{
+    border-radius: 50px 0 0 0;
+}
+
+.bacc-val1 li:last-child{
+    border-radius: 0 0 0 50px;
+}
+
+.bacc-val1 li:nth-child(odd){
+    background: #9b9b7a;
+    padding: 2px 20px;
+    width: 230%;
+    margin: 5px;
+}
+
+.bacc-val1 li:nth-child(even){
+    background: #9b9b7a;
+    padding: 2px 20px;
+    width: 230%;
+    margin: 5px;
+}
+
+.bacc-val2 li:first-child{
+    border-radius: 0 50px 0 0;
+}
+
+.bacc-val2 li:last-child{
+    border-radius: 0 0 50px 0;
+}
+
+.bacc-val2 li:nth-child(odd){
+    background: #9b9b7a;
+    padding: 2px 20px;
+    width: 230%;
+    margin: 5px;
+}
+
+.bacc-val2 li:nth-child(even){
+    background: #9b9b7a;
+    padding: 2px 20px;
+    width: 230%;
+    margin: 5px;
+}
+/*-------------forgot password-------------*/
+.grid-forgotpass{
+    display: grid;
+    grid-template-columns: 2fr 2fr 0.5fr;
+    grid-template-rows: 1fr 1.4fr 2fr 2fr;
+    /*grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    background-color: aquamarine;*/
+    height: 47.3em;
+    grid-template-areas: 
+                    "top     top  bnk"
+                    "p-recover  p-recover   p-recover"
+                    "p-recover  p-recover   p-recover"
+                    "p-recover  p-recover   p-recover";
+}
+
+.top{
+    grid-area: top;
+}
+
+.bnk{
+    grid-area: bnk;
+}
+
+.p-recover{
+    grid-area: p-recover;
+    background-color: beige;
+}
+
+.top h2{
+    padding: 15px 0 0 100px;
+    font-size: 5em;
+    color: rgb(104, 92, 67);
+    font-family: 'Megrim', cursive;
+    font-weight: 400;
+}
+
+.p-recover{
+    text-align: center;
+    color: rgb(104, 92, 67);
+}
+
+.p-recover h3{
+    font-family: Quicksand;
+    font-size: 3.2em;
+}
+
+.fp-form{
+    margin: 1.7em 30em 0 30em;
+    border: 1px solid rgb(104, 92, 67);
+    padding: 2em;
+}
+
+.email1     /*textbox style*/
+ {
+   border-radius: 50px;
+   padding: 15px;
+   width: 330px;
+   height: 45px;
+   border: 0px;
+   background: white;
+   color:rgb(104, 92, 67);
+   font-family: Quicksand;
+   font-size: 18px;
+   font-weight: bold;
+   letter-spacing: 0.4px;
+   outline: none;
+}
+
+.p-recover h4{
+    font-family: Quicksand;
+    font-size: 1.4em;
+}
+
+.fp-btn a{
+    text-decoration: none;
+    font-size: 1.5em;
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+.fp-btn,.submit-btn{
+    font-family: Quicksand;
+    border: none;
+    background:rgb(41, 41, 41);
+    border-radius: 5px;
+    padding: 8px 25px 8px 25px;
+    transition: 200ms;
+}
+
+.submit-btn{
+    color: white;
+    font-size: 1.4em;
+}
+
+.submit-btn:hover{
+    opacity: 0.9;
+}
+
+.fp-btn:hover{
+    opacity: 0.9;
+}
+
+/*-------personal transaction--------*/
+.grid-ptransactions{
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 2.5fr 1fr;
+    grid-template-rows: 0.4fr 2fr;
+    /*grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    background-color: aquamarine;*/
+    height: 50em;
+    grid-template-areas:
+                "dlogo  t-head  t-head  logout1"
+                "cd-data     cd-data    db-data db-data";
+}
+    
+.dlogo{
+    grid-area: dlogo;
+}
+
+.cd-data{
+    grid-area: cd-data;
+    border: 2px solid white;
+    border-right-color: #676767;
+}
+
+.t-head{
+    grid-area: t-head;
+}
+
+.db-data{
+    grid-area: db-data;
+    border: 2px solid white;
+    border-left-color: #676767;
+}
+
+.logout1{
+    grid-area: logout1;
+}
+
+.dlogo{
+    background: #314e52;
+}
+
+.t-head,.logout1{
+    background:#a2d0c1;
+}
+
+.db-data,.cd-data{
+    background: white;
+}
+
+.t-head{
+    text-align: center;
+    padding-top: 30px;
+    color: #314e52;
+    font-size: 2.6em;
+    font-family: Quicksand;
+}
+
+.p-tbtn{
+    float: right; 
+    border: 2px solid #314e52;
+    color: #314e52;
+    background: transparent;
+    margin-top: 20px;
+    margin-right: 45px;
+    border-radius: 100%;
+    padding: 12px 20px;
+    font-size: 1.3em;
+    font-family: Quicksand;
+    font-weight: bold;
+    transition: all 250ms;
+    display: block;
+}
+
+.p-tbtn:hover {
+    background-color: #314e52;
+    color: white;
+}
+
+.cd-data,.db-data{
+    text-align: center;
+    padding-top: 10px;
+    font-size: 1.8em;
+    font-family: Quicksand;
+}
+
+th{
+    border: 1px solid gray;
+    padding: 10px;
+}
+
+table{
+    font-size: 0.9em;
+    border-spacing: 6px;
+    margin-top: 15px;
+    margin-left: auto; 
+    margin-right: auto;
+    border-collapse: collapse;
+    width: 85%;
+}   
+
+td{
+    font-size: 0.9em;
+    padding: 10px;
+}
+
+tr:nth-child(even){
+    background: whitesmoke;
+}
+
+/*-------------business transactions-----------*/
+.grid-btransactions{
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 2.5fr 1fr;
+    grid-template-rows: 0.4fr 2fr;
+    /*grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    background-color: aquamarine;*/
+    height: 50em;
+    grid-template-areas:
+                "dlogo1  t-head1  t-head1  logout11"
+                "cd-data    cd-data    db-data   db-data";
+}
+    
+.dlogo1{
+    grid-area: dlogo1;
+}
+
+.cd-data{
+    grid-area: cd-data;
+    border: 2px solid white;
+    border-right-color: #676767;
+}
+
+.t-head1{
+    grid-area: t-head1;
+}
+
+.db-data{
+    grid-area: db-data;
+    border: 2px solid white;
+    border-left-color: #676767;
+}
+
+.logout11{
+    grid-area: logout11;
+}
+
+.dlogo1{
+    background: #9b9b7a;
+}
+
+.t-head1,.logout11{
+    background:#9b9b7a;
+}
+
+.db-data1,.cd-data1{
+    background: white;
+}
+
+.dlogo1{
+    font-family: 'Megrim', cursive;
+    font-size: 3.5em;
+    text-align: center;
+    padding-top: 5px;
+    color: #333533;
+}
+
+.t-head1{
+    text-align: center;
+    padding-top: 30px;
+    color: #333533;
+    font-size: 2.6em;
+    font-family: Quicksand;
+}
+
+.b-tbtn{
+    float: right; 
+    border: 2px solid #333533;
+    color: #333533;
+    background: transparent;
+    margin-top: 20px;
+    margin-right: 45px;
+    border-radius: 100%;
+    padding: 12px 20px;
+    font-size: 1.3em;
+    font-family: Quicksand;
+    font-weight: bold;
+    transition: all 250ms;
+    display: block;
+}
+
+.b-tbtn:hover {
+    background-color: #3e3f3e;
+    color: white;
+    cursor: pointer;
+}
+
+/*----------terms and condition-----------*/
+.grid-ptnc{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+    grid-template-rows: 0.5fr 1.2fr 2fr;
+    /*grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    background-color: orange;*/
+    height: 45em;
+    grid-template-areas: 
+                    "tnc-back   tnc-wh      tnc-logo"
+                    "tnc-wh1     tnc-h1      tnc-wh3"
+                    "tnc-wh2     tnc-h2      tnc-wh4";
+}
+
+.tnc-back{
+    grid-area: tnc-back;
+}
+
+.tnc-wh{
+    grid-area: tnc-wh;
+}
+
+.tnc-logo{
+    grid-area: tnc-logo;
+}
+
+.tnc-back,.tnc-wh,.tnc-logo{
+    background: white;
+}
+
+.tnc-wh1{
+    grid-area: tnc-wh1;
+}
+
+.tnc-wh2{
+    grid-area: tnc-wh2;
+}
+
+.tnc-h1{
+    grid-area: tnc-h1;
+}
+
+.tnc-h2{
+    grid-area: tnc-h2;
+}
+
+.tnc-wh3{
+    grid-area: tnc-wh3;
+}
+
+.tnc-wh4{
+    grid-area: tnc-wh4;
+}
+
+.tnc-wh1,.tnc-wh2,.tnc-h1,.tnc-h2,.tnc-wh3,.tnc-wh4{
+    background: beige;
+    color: rgb(104, 92, 67);
+}
+
+.tnc-logo h2{
+    text-align: right;
+    font-weight: 500;
+    font-size: 5.5em;
+    font-family: 'Megrim', cursive;
+    color: rgb(116, 99, 65);
+    padding-right: 60px;
+}
+
+.tnc-h1 h2{
+    font-family: Quicksand;
+    font-size: 2.8em;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.tnc-h1 h3,.tnc-h2 h3{
+    font-family: Quicksand;
+    font-size: 2em;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+.tnc-h1 .tnc-p,.tnc-h2 .tnc-p,.tnc-ul{
+    font-family: Quicksand;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding-top: 10px;
+    text-align: justify;
+    line-height: 37px;
+}
+
+.tncmainpara{
+    font-size: 1.4em;
+}
+
+.tnc-ul{
+    list-style-type: disc;
+    padding-left: 20px;
+}
